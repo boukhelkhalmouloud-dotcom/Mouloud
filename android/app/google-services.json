@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "33342303235",
+    "project_id": "izh-news",
+    "storage_bucket": "izh-news.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33342303235:android:8dea997d685b44dc0af236",
+        "android_client_info": {
+          "package_name": "com.example.izh_events"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz6E-KQ2x4tdW3l_EKfMavMmRxfkV3V-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

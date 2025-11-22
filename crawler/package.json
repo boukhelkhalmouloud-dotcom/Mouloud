@@ -1,0 +1,11 @@
+{
+  "name": "izh-crawler",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.7.0",
+    "@google/generative-ai": "^0.21.0",
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.3.2"
+  }
+}
