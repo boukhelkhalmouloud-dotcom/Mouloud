@@ -1,7 +1,8 @@
 import fetch from "node-fetch";
-import cheerio from "cheerio";
+import * as cheerio from "cheerio";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Firestore, FieldValue } from "@google-cloud/firestore";
+
 
 // --- env from GitHub Secrets ---
 const projectId = process.env.FIREBASE_PROJECT_ID; // e.g. "izh-news"
