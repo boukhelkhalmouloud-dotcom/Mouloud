@@ -21,7 +21,7 @@ jobs:
       - name: Install deps
         run: |
           cd crawler
-          npm ci
+          npm install
 
       - name: Run crawler
         env:
