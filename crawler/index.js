@@ -64,10 +64,10 @@ async function run() {
   if (!projectId || !sa) throw new Error("Missing FIREBASE_PROJECT_ID or GCP_SA_KEY");
 
   // Read sources
-  const src = await db.collection("sources").get();
+  const src = await db.collection("source").get();
   const sources = src.docs.map(d => ({ id: d.id, ...d.data() }));
 
-  for (const s of sources) {
+  for (const s of source) {
     let posts = [];
     try {
       if (s.kind === "vk" && s.domain) posts = await fetchVkPosts(s.domain);
@@ -78,7 +78,7 @@ async function run() {
     }
 
     for (const p of posts) {
-      const evRef = db.collection("events").doc(p.id);
+      const evRef = db.collection("source").doc(p.id);
       const exists = await evRef.get();
       if (exists.exists) continue; // dedupe: only new items
 
@@ -100,7 +100,7 @@ async function run() {
     }
 
     try {
-      await db.collection("sources").doc(s.id).update({
+      await db.collection("source").doc(s.id).update({
         lastPolledAt: FieldValue.serverTimestamp()
       });
     } catch (_) {}
